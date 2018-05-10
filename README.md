@@ -4,10 +4,15 @@
  - MainActivity(bgm 재생 부분)
  - MailBox Activity와 MainActivity 연동
  - ViewFlipper를 통한 SlideShow 구현 완료 - Animation 적용
+ - Splash Activity
+ - Login Activity
+ - Main Activity - Main UI
+ - MailCheck Dialog
+ - Message Dialog 
  
 2. 진행할 사항
- 1) Splash Activity
- 2) Login Activity
- 3) Main Activity - Main UI
- 4) MailCheck Dialog
- 5) Message Dialog 
+ 1) 
+ 2) 
+ 3) 
+ 4) 
+ 5) 
