@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">YeonRoLoVe</string>
+    <string name="position1">1번의 메세지</string>
+    <string name="position2">2번의 메세지</string>
+    <string name="position3">3번의 메세지</string>
+    <string name="position4">4번의 메세지</string>
+    <string name="position5">5번의 메세지</string>
+    <string name="position6">6번의 메세지</string>
+    <string name="position7">7번의 메세지</string>
+    <string name="position8">8번의 메세지</string>
+    <string name="position9">9번의 메세지</string>
+    <string name="position10">10번의 메세지</string>
+
+
 </resources>

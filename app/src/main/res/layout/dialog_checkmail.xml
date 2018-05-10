@@ -11,11 +11,11 @@
         android:layout_width="150sp"
         android:layout_height="60sp"
         android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/envelope_1"
+        app:srcCompat="@drawable/carnation_1"
         android:layout_weight="2"/>
 
     <TextView
-        android:id="@+id/tv_mail"
+        android:id="@+id/tv_mailcontent"
         android:gravity="center"
         android:text="메세지가 도착했습니다"
         android:layout_width="match_parent"
@@ -29,20 +29,14 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/btn_ok"
-            android:text="메일 확인"
+            android:id="@+id/btn_checkmail"
+            android:text="확인"
             android:textSize="10sp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             />
 
-        <Button
-            android:id="@+id/btn_cancel"
-            android:text="취소"
-            android:textSize="10sp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            />
+
 
     </LinearLayout>
 

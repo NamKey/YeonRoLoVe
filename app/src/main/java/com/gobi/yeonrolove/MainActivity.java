@@ -1,5 +1,6 @@
 package com.gobi.yeonrolove;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -28,9 +29,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //BGM 재생 관련 View
     public Button btn_play,btn_stop;                                              // play&pause 버튼과 stop 버튼
     public MediaPlayer mp3;
+    public MediaPlayer mp3_mail;
 
     //mail activity로 전환되는 버튼
     public Button btn_mail;
+
+    public Dialog dialog_mailalarm;
+
+    public Button btn_ok;
+    public Button btn_cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mp3 = MediaPlayer.create(this,R.raw.backgroundmusic);               //mp3 객체 생성
         mp3.setLooping(true);
+
+        mp3_mail = MediaPlayer.create(this,R.raw.mail_alarm_v2);
 
         btn_mail = findViewById(R.id.btn_mail);                                     //Mail Activity로 넘어가는 버튼
         btn_mail.setOnClickListener(this);
@@ -103,10 +112,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(count<4)
                     flipper.showPrevious();//이전 view로 교체
                 else {
-                    Toast.makeText(this, "마지막장입니다.", Toast.LENGTH_SHORT).show();
+                    dialog_mailalarm = new Dialog(this);
+                    dialog_mailalarm.setContentView(R.layout.dialog_default);
+                    btn_ok = dialog_mailalarm.findViewById(R.id.btn_ok);
+                    btn_cancel = dialog_mailalarm.findViewById(R.id.btn_cancel);
+
+                    btn_ok.setOnClickListener(this);
+                    btn_cancel.setOnClickListener(this);
+
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    dialog_mailalarm.show();      // dialog 출력
+                    mp3_mail.setLooping(false);
+                    mp3_mail.start();
                     count--; //카운터값이 범위 벗어나지 않도록
                 }
                 break;
+            case R.id.btn_ok:
+                dialog_mailalarm.dismiss();
+
+                Intent mailintent = new Intent(this,MailActivity.class);
+                startActivity(mailintent);
+
+                break;
+
+            case R.id.btn_cancel:
+                dialog_mailalarm.dismiss();
+                break;
+
             case R.id.btn_previous:
                 count--;
                 if(count>-1)

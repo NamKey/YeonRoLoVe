@@ -24,6 +24,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     public Dialog dialog_default2;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
