@@ -9,7 +9,7 @@
  - Main Activity - Main UI
  - MailCheck Dialog
  - Message Dialog 
- -------------------------->1차 
+<-------------------------->1차 
 2. 진행할 사항
  1) 
  
