@@ -7,10 +7,64 @@
     tools:context="com.gobi.yeonrolove.MainActivity">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="100sp"
+        android:layout_height="300sp"
+        >
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/flipper">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/photo1"
+                android:src="@drawable/photo1"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/photo2"
+                android:src="@drawable/photo2"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/photo3"
+                android:src="@drawable/photo3"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/photo4"
+                android:src="@drawable/photo4"/>
+        </ViewFlipper>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_previous"
+            android:text="이전"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_next"
+            android:text="다음"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="5sp"
         android:orientation="horizontal">
 
         <Button
@@ -34,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30sp"
+        android:layout_marginBottom="10sp"
         android:orientation="vertical">
         <TextView
             android:textStyle="bold"
@@ -53,8 +107,6 @@
             android:layout_width="100sp"
             android:layout_height="50sp" />
     </LinearLayout>
-
-
 </RelativeLayout>
 
 

@@ -9,14 +9,29 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
+
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    //메인 이미지 슬라이드 부분
+    public ViewFlipper flipper;
+    public Button btn_next;
+    public Button btn_previous;
+    int count=0; //첫, 끝화면을 알리기 위한 변수
+
+    //BGM 재생 관련 View
     public Button btn_play,btn_stop;                                              // play&pause 버튼과 stop 버튼
     public MediaPlayer mp3;
+
+    //mail activity로 전환되는 버튼
     public Button btn_mail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +48,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn_mail = findViewById(R.id.btn_mail);                                     //Mail Activity로 넘어가는 버튼
         btn_mail.setOnClickListener(this);
+
+
+        flipper=findViewById(R.id.flipper);
+        //ViewFlipper 객체 참조
+
+        Animation showln= AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+        //ViewFlipper가 View를 교체할 때 애니메이션이 적용되도록 설정
+        //애니메이션은 안드로이드가 보유한 animation 리소스 파일 사용
+        //ViewFlipper의 View가 교체될 때 새로 보여지는 View의 등장 애니메이션
+        //AnimationUtils.loadAnimation()-트윈animation리소스 파일을 animation 객체로 만들어주는 메소드
+        //첫번째 파라미터 : context
+        //두번째 파라미터 : 트윈 animation 리소스 파일
+        flipper.setInAnimation(showln);
+        //왼쪽에서 슬라이딩되며 등장
+        flipper.setOutAnimation(this, android.R.anim.slide_out_right);
+        //오른쪽으로 슬라이딩되며 퇴장
+
+        btn_next = findViewById(R.id.btn_next);
+        btn_next.setOnClickListener(this);
+
+        btn_previous = findViewById(R.id.btn_previous);
+        btn_previous.setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +96,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_mail :                                    //MainActivity에서 MailActivity로 넘어가도록 해주는 버튼
                 Intent intent = new Intent(MainActivity.this, MailActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.btn_next:
+                count++;
+                if(count<4)
+                    flipper.showPrevious();//이전 view로 교체
+                else {
+                    Toast.makeText(this, "마지막장입니다.", Toast.LENGTH_SHORT).show();
+                    count--; //카운터값이 범위 벗어나지 않도록
+                }
+                break;
+            case R.id.btn_previous:
+                count--;
+                if(count>-1)
+                    flipper.showNext();//다음 view로 교체
+                else {
+                    Toast.makeText(this, "첫번째장입니다.", Toast.LENGTH_SHORT).show();
+                    count++;//카운터 값이 범위 벗어나지 않도록
+                }
                 break;
         }
     }
