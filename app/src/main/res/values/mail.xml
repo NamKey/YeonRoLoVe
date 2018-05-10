@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_mail">
+        <item>강세진</item>
+        <item>김정원</item>
+        <item>남기륭</item>
+        <item>박상은</item>
+        <item>임진혁</item>
+        <item>정수지</item>
+        <item>한중훈</item>
+        <item>홍지우</item>
+        <item>황경화</item>
+        <item>정현영</item>
+    </string-array>
+</resources>

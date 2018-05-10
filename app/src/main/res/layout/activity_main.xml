@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gobi.yeonrolove.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:text="Play"
+            />
+        <!-- 중단 버튼 -->
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_marginLeft="50sp"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:text="stop"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30sp"
+        android:orientation="vertical">
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:text="메일함 확인 다이얼로그에서 진입"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_mail"
+            android:textStyle="bold"
+            android:text="메일함"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15sp"
+            android:layout_width="100sp"
+            android:layout_height="50sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
