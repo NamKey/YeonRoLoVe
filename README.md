@@ -1,4 +1,4 @@
-# YeonRoLoVe
+# YeongRoLoVe
 스승의날 기념 어플
 1. 현재 진행 사항
  - MainActivity(bgm 재생 부분)
