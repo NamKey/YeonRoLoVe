@@ -1,114 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_context"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical"
     tools:context="com.gobi.yeonrolove.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="100sp"
-        android:layout_height="300sp"
-        >
-        <ViewFlipper
-            android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/flipper">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/photo1"
-                android:src="@drawable/photo1"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/photo2"
-                android:src="@drawable/photo2"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/photo3"
-                android:src="@drawable/photo3"/>
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/iv_can" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="BGM - 스승의 날" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="20dp">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:id="@+id/btn_play"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/photo4"
-                android:src="@drawable/photo4"/>
-        </ViewFlipper>
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/btn_play"
+                android:text="Play" />
+
+            <ImageView
+                android:id="@+id/btn_stop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/btn_stop"
+                android:text="stop" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50sp"
-        android:orientation="horizontal">
-        <Button
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <ViewFlipper
+            android:id="@+id/flipper"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/photo1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo1" />
+
+            <ImageView
+                android:id="@+id/photo2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo2" />
+
+            <ImageView
+                android:id="@+id/photo3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo3" />
+
+            <ImageView
+                android:id="@+id/photo4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo4" />
+
+            <ImageView
+                android:id="@+id/photo5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo5" />
+
+            <ImageView
+                android:id="@+id/photo6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo6" />
+
+            <ImageView
+                android:id="@+id/photo7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo7" />
+
+            <ImageView
+                android:id="@+id/photo8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo8" />
+
+        </ViewFlipper>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
             android:id="@+id/btn_previous"
-            android:text="이전"/>
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text="이전" />
+
+        <Button
             android:id="@+id/btn_next"
-            android:text="다음"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="다음" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5sp"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:gravity="center">
 
-        <Button
-            android:id="@+id/btn_play"
-            android:layout_width="100sp"
-            android:layout_height="50sp"
-            android:text="Play"
-            />
-        <!-- 중단 버튼 -->
-        <Button
-            android:id="@+id/btn_stop"
-            android:layout_marginLeft="50sp"
-            android:layout_width="100sp"
-            android:layout_height="50sp"
-            android:text="stop"
-            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btn_mail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/icon_postbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메일함"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btn_logout"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:background="@drawable/icon_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그아웃"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10sp"
-        android:orientation="vertical">
-        <TextView
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_gravity="center_horizontal"
-            android:text="메일함 확인 다이얼로그에서 진입"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btn_mail"
-            android:textStyle="bold"
-            android:text="메일함"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15sp"
-            android:layout_width="100sp"
-            android:layout_height="50sp" />
-    </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
 
 
 

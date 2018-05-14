@@ -1,129 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_context"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:orientation="vertical"
+    android:background="@color/colorWhite"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="사진을 넣는 곳입니다. "
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@android:color/darker_gray" />
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/bg_yoon"
+        android:gravity="center">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.7"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ID"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_input_ID"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="yoon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="PW"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_input_PW"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="0515"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="로그인" />
+
+        <Button
+            android:layout_marginLeft="50dp"
+            android:id="@+id/btn_quit"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="종료" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:gravity="center"
-        android:text="예시 : 스승의 날 기념 어플"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
+        android:text="made by students of\nAdvanced Visual Programming Class"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
         android:textStyle="bold" />
-
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="이름"
-                android:textColor="@android:color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/edt_input_ID"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:gravity="center"
-
-                android:hint="이름 입력" /> </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="학번"
-                android:textColor="@android:color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-            <EditText
-                android:id="@+id/edt_input_PW"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:inputType="textPassword"
-                android:gravity="center"
-                android:hint="학번 입력" /> </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/btn_login"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="로그인" />
-
-            <Button
-                android:id="@+id/btn_quit"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="종료" />
-
-            <Button
-                android:id="@+id/btn_hint"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="힌트" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="예시 : 사진 \n\n made by 고급 비쥬얼 프로그래밍 수강생"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-    </LinearLayout>
 
 </LinearLayout>

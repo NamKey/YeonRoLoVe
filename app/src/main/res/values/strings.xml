@@ -1,15 +1,78 @@
 <resources>
     <string name="app_name">YeonRoLoVe</string>
-    <string name="position1">1번의 메세지</string>
-    <string name="position2">2번의 메세지</string>
-    <string name="position3">3번의 메세지</string>
-    <string name="position4">4번의 메세지</string>
-    <string name="position5">5번의 메세지</string>
-    <string name="position6">6번의 메세지</string>
-    <string name="position7">7번의 메세지</string>
-    <string name="position8">8번의 메세지</string>
-    <string name="position9">9번의 메세지</string>
-    <string name="position10">10번의 메세지</string>
-
-
+    <string name="position1">
+        윤영로 교수님께,\n\n
+        교수님 항상 저희를 아들딸 처럼 생각해주시고\n
+        관심있게 지켜봐주셔서 감사합니다.\n
+        아직 한참 부족한 저지만\n
+        교수님의 관심에 보답할 수 있도록\n
+        열심히 하겠습니다.\n
+        스승의 은혜 감사드립니다.
+    </string>
+    <string name="position2">
+        안녕하세요 교수님,\n\n
+        교수님께서 수업보다 중요한 인생얘기를\n
+        해주시는 것에 대해 감사하게 생각하고 있습니다.\n
+        이번 학기도 이제 얼마남지 않았지만\n
+        앞으로도 교수님께 수업과 수업보다\n
+        더 중요한 인생의 가르침을 받고 싶습니다.\n
+        감사합니다!!
+    </string>
+    <string name="position3">
+        때론 저희를 위해서 다그치시고\n
+        때로는 북돋아 주시는 교수님 덕분에\n
+        마지막 학기가 즐겁습니다. 항상 감사드립니다.
+    </string>
+    <string name="position4">
+        교수님!\n\n
+        안식년 동안 교수님 수업을 못 들어서\n
+        너무 아쉬웠습니다.\n
+        드디어 교수님이 돌아오셔서\n
+        고급 비주얼이 개설되어서\n
+        너무 기쁩니다.\n
+        항상 열정을 갖고, 학생들에게\n
+        사랑으로 가르쳐주시는 점 감사합니다!\n
+        비록 지금은 교수님의 가르침을\n
+        따라가지 못하는 못난 제자이지만,\n
+        앞으로 발전하는 모습 보여드리겠습니다.\n
+        항상 감사합니다!
+    </string>
+    <string name="position5">
+        교수님!\n\n
+        항상 저희를 위해 열성적으로\n
+        힘써 주셔서 감사합니다!\n
+        공부 열심히 해서 학교를 빛내는 사람이\n
+        되도록 노력하겠습니다!\n
+        감사합니다 교수님 사랑합니다♥♥
+    </string>
+    <string name="position6">
+        교수님 안녕하세요!\n\n
+        DSP 이후로 교수님 수업을\n
+        한번 더 듣게 되어서 영광입니다!\n
+        항상 교수님의 진심어린 조언과 가르침\n
+        열심히 새겨듣고 있습니다.\n
+        앞으로 남은 반학기 동안 더욱더 수업에 집중하고\n
+        공부도 열심히 하는 학생이 되겠습니다.\n
+        항상 감사드리고 스승의 날 진심으로 축하드려요!!
+    </string>
+    <string name="position7">
+        항상 많은 관심과 사랑을 주셔서 감사합니다.\n
+        행복하세요!!
+    </string>
+    <string name="position8">
+        교수님 스승의날 축하드립니다!\n\n
+        정말 친자식처럼 항상 저희들을 하나하나\n
+        신경써주시고 아껴주셔서 감사합니다.\n
+        앞으로도 많은 가르침 부탁드리며\n
+        건강하게 오래오래 강단에 서주세요❤
+    </string>
+    <string name="position9">
+        정성으로 가르치고 이끌어주셔서 감사합니다.\n
+        건강하시고, 즐겁고 행복한 날들 되시기 바라요.
+    </string>
+    <string name="position10">
+        교수님 싸랑합니다 ♡♡♡\n
+        교수님의 저희를 항상 신경써주시는\n
+        넓은 마음 닮도록 노력하겠습니다.
+    </string>
 </resources>

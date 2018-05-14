@@ -17,10 +17,6 @@ public class MailActivity extends AppCompatActivity implements AdapterView.OnIte
     public Button btn_close_mail;
     public ListView lv_mail;
 
-    public Button btn_pre, btn_message;
-
-    public TextView tv_message;
-
     public Dialog dialog_message;
     public TextView tv_mailcontent;
     public Button btn_checkmail;
@@ -29,6 +25,8 @@ public class MailActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail);
+
+        getSupportActionBar().hide();
 
         setTitle("Mail Box");
 
@@ -44,14 +42,6 @@ public class MailActivity extends AppCompatActivity implements AdapterView.OnIte
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, names);
         lv_mail.setAdapter(adapter);
-
-        //Dialog 부분
-//        btn_pre = findViewById(R.id.btn_pre);
-//        btn_pre.setOnClickListener(this);
-//
-//        btn_message = findViewById(R.id.btn_message);
-//        btn_message.setOnClickListener(this);
-
     }
 
     @Override
@@ -121,7 +111,6 @@ public class MailActivity extends AppCompatActivity implements AdapterView.OnIte
                 tv_mailcontent.setText(context.getResources().getText(R.string.position10));
                 break;
         }
-
 
         dialog_message.show();      // dialog 출력
     }

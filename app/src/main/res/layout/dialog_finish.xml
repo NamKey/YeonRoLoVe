@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="250dp"
-    android:layout_height="200dp"
+    android:layout_height="150dp"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv_mail2"
         android:gravity="center"
-        android:text="확인을 누르시면 프로그램이 종료됩니다."
+        android:text="어플리케이션을 종료하시겠습니까?"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"/>
@@ -20,7 +20,7 @@
 
         <Button
             android:id="@+id/btn_ok_close_app"
-            android:text="확인"
+            android:text="종료"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
